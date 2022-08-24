@@ -257,7 +257,6 @@ class shell:
                 cls.get_executable(), cls._win_command_prefix, argvquote(cmd)
             )
         
-        import pdb; pdb.set_trace()
         proc = sp.Popen(
             cmd,
             bufsize=-1,

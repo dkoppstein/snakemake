@@ -557,6 +557,7 @@ class JobScheduler:
     def run(self, jobs, executor=None):
         if executor is None:
             executor = self._executor
+        import pdb; pdb.set_trace()
         executor.run_jobs(
             jobs,
             callback=self._finish_callback,

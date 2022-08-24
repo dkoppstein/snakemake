@@ -727,6 +727,7 @@ def snakemake(
                     conda_not_block_search_path_envvars=conda_not_block_search_path_envvars,
                     local_groupid=local_groupid,
                 )
+
                 success = workflow.execute(
                     targets=targets,
                     dryrun=dryrun,
