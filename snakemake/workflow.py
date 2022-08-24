@@ -1067,6 +1067,7 @@ class Workflow:
                 logger.info("")
 
         try:
+            import pdb; pdb.set_trace()
             success = self.scheduler.schedule()
         except Exception as e:
             if dryrun:
