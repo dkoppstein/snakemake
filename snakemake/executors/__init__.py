@@ -612,6 +612,8 @@ class CPUExecutor(RealExecutor):
 
     def spawn_job(self, job):
         cmd = self.format_job_exec(job)
+        with open("/home/pipegrp/snakedebug.txt", "a") as outh:
+            print(cmd, file=outh)
         try:
             subprocess.check_call(cmd, shell=True)
         except subprocess.CalledProcessError as e:
